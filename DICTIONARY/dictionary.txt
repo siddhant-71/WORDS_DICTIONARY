@@ -1,0 +1,689 @@
+springbootapplication: a convenience annotation combining configuration, enableautoconfiguration, and componentscan for bootstrapping apps
+restcontroller: declares a class as a rest api controller returning data as json or xml
+requestmapping: maps http requests to specific methods in controllers
+getmapping: shortcut for handling http get requests in controllers
+postmapping: shortcut for handling http post requests in controllers
+putmapping: shortcut for handling http put requests in controllers
+deletemapping: shortcut for handling http delete requests in controllers
+patchmapping: shortcut for handling http patch requests in controllers
+requestparam: binds query parameters or form fields to method parameters
+pathvariable: binds uri template variables to method parameters
+requestbody: binds the http request body to a java object
+responsebody: tells spring to bind a method return value to the web response
+responseentity: represents a complete http response including status, headers, and body
+service: marks a class as a service in the business layer
+component: marks a class as a generic spring-managed bean
+repository: marks a class as a data repository with automatic exception translation
+entity: marks a class as a persistent jpa entity
+id: marks a field as the primary key in a jpa entity
+generatedvalue: specifies the strategy for primary key generation
+column: customizes the mapping of a field to a database column
+table: specifies the table name for a jpa entity
+configuration: marks a class as a source of bean definitions
+bean: declares a method as a spring bean producer
+autowired: injects bean dependencies automatically
+qualifier: specifies which bean to inject when multiple candidates exist
+value: injects values from properties or environment variables
+propertysource: loads properties from an external file
+profile: specifies that a component is active only under certain profiles
+conditionalonproperty: enables a bean only if a property matches a condition
+conditionalonmissingbean: creates a bean only if one is not already present
+conditionalonclass: creates a bean if a specific class is on the classpath
+springapplication: the class used to launch a spring boot app
+applicationproperties: a file for centralized app configuration properties
+applicationyml: a yaml format alternative to applicationproperties
+environment: provides access to application properties and environment variables
+commandlinerunner: runs code after the spring boot app starts
+applicationrunner: similar to commandlinerunner but with application arguments
+exceptionhandler: handles exceptions thrown in controllers
+controlleradvice: global error and exception handling component
+resttemplate: a client for making synchronous http requests
+webclient: a reactive client for asynchronous http calls
+jdbc: standard java api for database access
+jpa: java persistence api for object-relational mapping
+springdatajpa: spring project simplifying jpa implementation
+crudrepository: provides basic crud operations for entities
+jparepository: extends crudrepository with more jpa features
+pagingandsortingrepository: adds pagination and sorting to repositories
+entitymanager: manages persistence operations on entities
+transaction: groups database operations into a single unit of work
+transactional: declares that a method or class should run within a transaction
+datasource: configuration for database connection pooling
+h2: in-memory database often used for testing
+mysql: popular relational database supported by spring boot starters
+postgresql: advanced open-source relational database supported by spring boot
+mongorepository: provides operations for mongodb collections
+springdatamongo: module for integrating mongodb with spring
+springsecurity: framework module for securing applications
+javavirtualmachine: the runtime environment that executes compiled java bytecode
+javacompiler: translates java source code into bytecode
+javainterpreter: part of jvm that executes bytecode instructions
+javaclass: the blueprint of objects in java containing fields and methods
+object: an instance of a class representing real-world entities in java
+inheritance: allows one class to acquire properties of another class
+polymorphism: enables one interface to be used with different underlying forms
+encapsulation: restricts direct access to object fields by using getters and setters
+abstraction: hides internal details and exposes only essential features
+interface: a collection of abstract methods for defining contracts in java
+abstractclass: a class that cannot be instantiated and may contain abstract methods
+finalclass: a class that cannot be subclassed
+finalmethod: a method that cannot be overridden by subclasses
+finalvariable: a variable whose value cannot be changed once assigned
+static: indicates a member belongs to the class itself rather than instances
+this: a keyword referring to the current object
+super: a keyword referring to the parent class of the current class
+package: a namespace for organizing related classes and interfaces
+import: statement to use classes and interfaces from other packages
+public: access modifier allowing visibility from any class
+private: access modifier restricting visibility to the declaring class only
+protected: access modifier allowing visibility within package and subclasses
+defaultaccess: access level with visibility limited to the same package
+constructor: special method for initializing new objects
+defaultconstructor: a constructor with no arguments automatically provided by java
+parametrizedconstructor: a constructor with arguments to set initial field values
+overloading: defining multiple methods with the same name but different parameters
+overriding: redefining a parent class method in a subclass
+mainmethod: entry point for java applications with signature public static void main
+string: class representing sequences of characters
+stringbuilder: mutable sequence of characters for efficient string manipulation
+stringbuffer: thread-safe version of stringbuilder
+array: fixed-size collection of elements of the same type
+arraylist: resizable implementation of a list interface
+linkedlist: list implementation using a doubly-linked list data structure
+hashmap: collection storing key-value pairs with fast lookups
+hashset: collection of unique elements without duplicates
+treeset: sorted set implementation using a red-black tree
+treemap: map implementation with sorted keys
+queue: interface representing a collection designed for holding elements prior to processing
+stack: collection representing last-in-first-out data structure
+deque: double-ended queue allowing insertion and removal at both ends
+iterator: object for iterating over elements in a collection
+comparable: interface to define natural ordering for objects
+comparator: interface for custom ordering of objects
+exception: object representing runtime errors or exceptional conditions
+throwable: superclass of all errors and exceptions
+trycatch: block structure to handle exceptions
+finally: block executed after try-catch, regardless of whether an exception occurred
+throws: keyword to declare that a method might throw exceptions
+throw: keyword to manually raise an exception
+runtimeexception: unchecked exception not required to be declared or caught
+ioexception: checked exception related to input-output operations
+filenotfoundexception: exception indicating a file cannot be located
+nullexception: error when an application attempts to use null where an object is required
+numberformatexception: error when parsing a string to a number fails
+classcastexception: error when casting an object to an incompatible type
+illegalargumentexception: indicates a method has been passed an inappropriate argument
+thread: lightweight process for concurrent execution
+runnable: interface defining a task to be executed by a thread
+synchronized: keyword for thread-safe access to methods or blocks
+volatile: keyword indicating a variable's value will be modified by different threads
+wait: method causing current thread to wait until another thread invokes notify
+notify: method to wake up a single waiting thread
+notifyall: method to wake up all waiting threads
+deadlock: situation where two or more threads are blocked forever waiting for each other
+concurrency: ability to run multiple tasks simultaneously
+executorservice: framework to manage and control thread execution
+future: represents the result of an asynchronous computation
+callable: similar to runnable but returns a result or throws an exception
+lambda: concise way to represent anonymous functions using -> syntax
+stream: abstraction for processing sequences of elements with functional operations
+collectors: utility class with methods to collect stream results
+optional: container object which may or may not contain a non-null value
+methodreference: shorthand syntax for calling methods in lambdas or streams
+record: compact immutable data carrier class introduced in java 14
+enum: special type to define a fixed set of constants
+annotation: metadata attached to code for providing additional information
+reflection: ability to inspect and manipulate classes, fields, methods at runtime
+serialization: process of converting an object into a byte stream for storage or transmission
+deserialization: process of reconstructing an object from a byte stream
+classloader: part of jvm responsible for loading classes into memory
+garbagecollector: jvm component that automatically frees memory by reclaiming unused objects
+heap: memory area where java objects are allocated
+stackmemory: memory area used for method execution and local variables
+jvmoptions: command-line flags to customize jvm behavior
+javapackage: directory structure mapping to package declarations
+classpath: parameter specifying locations of classes and packages for jvm and compiler
+javadoc: tool for generating html documentation from java source code comments
+javabean: reusable software component following conventions of private fields with getters and setters
+cplusplus: powerful general-purpose programming language with support for object-oriented and generic programming
+compilation: process of translating source code into machine code
+linking: combining compiled object files into a single executable
+preprocessor: tool that processes directives like include and define before compilation
+include: directive to include contents of a file in the source code
+define: directive for creating macros or constants
+namespace: logical grouping of identifiers to avoid name conflicts
+using: declares a namespace or type alias for easier code readability
+iostream: standard library for input and output streams
+cin: standard input stream for reading from keyboard
+cout: standard output stream for writing to console
+cerr: standard error stream for error messages
+clog: standard stream for logging information
+printf: c-style function for formatted output
+scanf: c-style function for formatted input
+variable: named storage for data values
+constant: immutable value declared with const or constexpr
+datatype: classification of data like int, char, float, or double
+char: data type for representing single characters
+int: data type for representing integers
+float: data type for representing single-precision floating-point numbers
+double: data type for representing double-precision floating-point numbers
+bool: data type representing boolean values true or false
+void: type indicating absence of value or return
+array: collection of fixed-size elements of the same type
+pointer: variable storing memory address of another variable
+reference: alias to an existing variable
+dereference: accessing the value pointed to by a pointer using *
+nullptr: keyword representing null pointer constant
+dynamicmemory: memory allocated at runtime using new or malloc
+new: operator for allocating dynamic memory
+delete: operator for deallocating dynamic memory
+malloc: c-style function to allocate memory on heap
+free: c-style function to deallocate memory on heap
+stackmemory: memory used for function calls and local variables
+heapmemory: memory used for dynamic allocations at runtime
+operatoroverloading: defining custom behavior for operators on user-defined types
+functionoverloading: defining multiple functions with the same name but different parameters
+function: block of reusable code performing specific tasks
+inline: suggests compiler to replace function call with function body
+template: mechanism for creating generic classes or functions
+class: blueprint for creating objects in c++
+object: instance of a class representing data and behavior
+struct: user-defined type grouping related variables together with default public members
+constructor: special method initializing new objects of a class
+destructor: special method cleaning up resources when an object is destroyed
+copyconstructor: constructor that creates a new object as a copy of an existing one
+assignmentoperator: operator for assigning one object’s values to another
+friend: keyword allowing access to private and protected members from outside classes or functions
+private: access specifier restricting member visibility within the class
+public: access specifier allowing member visibility everywhere
+protected: access specifier allowing visibility within class and subclasses
+inheritance: mechanism to create a new class from an existing one
+singleinheritance: inheritance from one base class
+multipleinheritance: inheritance from multiple base classes
+multilevelinheritance: chain of inheritance with multiple levels
+hierarchicalinheritance: multiple classes inheriting from one base class
+virtualinheritance: technique to prevent duplicate instances in diamond inheritance
+virtualfunction: function that can be overridden in derived classes for polymorphism
+purevirtualfunction: abstract function with no implementation, making a class abstract
+abstractclass: class containing at least one pure virtual function
+polymorphism: ability for different classes to define methods with same signature
+encapsulation: hiding internal state of objects by restricting access to members
+static: keyword for class members shared among all instances
+mutable: allows modification of class members even in const objects
+explicit: prevents implicit conversions for constructors with single arguments
+thispointer: pointer to the current object inside a class method
+constmemberfunction: member function that cannot modify object state
+trycatch: block structure for exception handling
+throw: keyword to signal an exception
+exception: runtime error that can be handled using try-catch blocks
+standardtemplate library: collection of reusable generic data structures and algorithms
+vector: dynamic array implementation in stl
+list: doubly-linked list implementation in stl
+deque: double-ended queue implementation in stl
+stack: container adapter providing last-in-first-out behavior
+queue: container adapter providing first-in-first-out behavior
+priorityqueue: container adapter providing sorted elements by priority
+set: container storing unique sorted elements
+multiset: container storing sorted elements allowing duplicates
+map: container storing key-value pairs with unique keys
+multimap: container storing key-value pairs allowing duplicate keys
+unorderedmap: hashmap-based container storing key-value pairs
+iterator: object pointing to elements in stl containers
+algorithm: stl header containing common algorithms like sort and find
+pair: utility class holding two heterogeneous objects
+makepair: function to create a pair object
+lambda: anonymous function defined using []
+typeid: operator to get runtime type information
+sizeof: operator returning size of a data type or object in bytes
+typedef: keyword to create type aliases
+enum: user-defined type representing named integer constants
+bitfields: struct members that occupy specified number of bits
+union: user-defined type allowing different members to share same memory location
+volatile: keyword indicating variable may change outside program control
+asm: keyword to insert inline assembly code
+main: entry point function of every c++ program
+restapi: architectural style for building web services with http
+crudapi: api providing create, read, update, delete operations
+springmvc: framework module for building web applications
+viewresolver: resolves view names to actual views for rendering
+thymeleaf: modern template engine integrated with spring
+freemarker: template engine for generating html from data
+jsp: java server pages for building dynamic web pages
+servlet: server-side java program handling requests and responses
+handlerinterceptor: interface for intercepting incoming http requests
+cors: cross-origin resource sharing configuration
+filters: components for filtering requests and responses
+webfilter: servlet filter registered in spring boot
+webmvcconfigurer: interface for customizing spring mvc setup
+multipartfile: interface representing uploaded files
+multipartresolver: component handling file uploads
+httpmessageconverter: converts http requests and responses to java objects
+objectmapper: jackson class for json serialization and deserialization
+jsonview: controls serialization of specific fields in responses
+mediatype: represents content type like application/json
+httpexchange: http request and response exchange abstraction
+actuator: module for exposing management and monitoring endpoints
+healthindicator: component providing custom health checks
+metrics: measurement data for monitoring application performance
+endpoint: url exposing specific functionality or data
+infoendpoint: actuator endpoint providing app metadata
+healthendpoint: actuator endpoint showing health status
+envendpoint: actuator endpoint exposing environment properties
+heapdump: actuator endpoint producing heap memory snapshot
+threadsdump: actuator endpoint showing thread state information
+metricsendpoint: actuator endpoint exposing collected metrics
+auditevents: actuator feature tracking important events
+auditoraware: component providing current user info for auditing
+springbatch: framework for batch processing in spring apps
+step: single phase in a batch job
+job: batch process composed of multiple steps
+joblauncher: component for starting batch jobs
+jobrepository: persists batch job execution metadata
+jobexecution: represents execution state of a batch job
+stepexecution: represents execution state of a batch step
+springintegration: module for messaging and workflow
+channel: abstraction for message passing between components
+gateway: component exposing integration flows as services
+messagehandler: processes incoming messages in integration
+poller: triggers periodic polling of message sources
+transactionmanager: coordinates transactions across resources
+propagation: defines how transactions behave across method calls
+rollback: reverts changes made during transaction on error
+commit: finalizes transaction changes to the database
+hibernate: popular jpa provider used with spring boot
+springdatarest: module for exposing repositories as rest endpoints
+repositoryrestresource: annotation customizing rest exposure of repositories
+projection: limits fields returned by spring data rest
+pagedresources: response wrapper for paginated data
+hateoas: hypermedia as the engine of application state support
+entitymodel: wrapper adding links to a resource
+link: represents a hypermedia link in rest responses
+hal: hypertext application language for api responses
+websocket: protocol enabling real-time bidirectional communication
+simpmessage: simple messaging protocol message abstraction
+simpmessagingtemplate: component for sending messages over websockets
+stomp: messaging protocol supported by spring websockets
+brokerrelay: forwards messages to external message brokers
+destination: websocket endpoint for subscribing and sending messages
+crosssiteforgery: attack mitigated by csrf protection
+csrf: protection against cross-site request forgery attacks
+sessionmanagement: manages authenticated user sessions
+rememberme: feature allowing persistent login sessions
+passwordencoder: interface for encoding and verifying passwords
+bcryptpasswordencoder: popular password hashing implementation
+oauth2: protocol for authorization in web and mobile apps
+openidconnect: authentication layer built on top of oauth2
+jwtdecoder: parses and verifies json web tokens
+jwtenhancer: adds custom claims to json web tokens
+oauth2clients: configuration for using external oauth2 providers
+clientregistration: holds oauth2 client info
+securityfilterchain: configures http security filters
+httpsecurity: configures security rules for requests
+authenticationmanager: processes authentication requests
+authenticationprovider: verifies authentication credentials
+userdetails: represents user info in spring security
+userdetailsservice: loads user details for authentication
+grantedauthority: represents a permission or role
+preauthorize: checks access before method invocation
+postauthorize: checks access after method invocation
+secured: declares security constraints on methods
+rolesallowed: defines roles permitted to access methods
+securitycontext: holds authentication and security information
+principal: represents currently authenticated user
+anonymousauthentication: represents unauthenticated anonymous users
+stackoverflowerror: error when the call stack exceeds its limit
+heapoverflowerror: error when heap memory runs out
+outofmemoryerror: error indicating insufficient memory to allocate objects
+classnotfoundexception: exception when class definition is not found
+nosuchmethodexception: exception when a method does not exist
+nosuchfieldexception: exception when a field does not exist
+illegalstateexception: exception when a method is invoked at illegal time
+bufferedreader: reads text from input stream efficiently
+bufferedwriter: writes text to output stream efficiently
+printwriter: prints formatted text to files or streams
+scanner: reads input from various sources like console or files
+fileinputstream: reads raw bytes from a file
+bloomfilter: probabilistic data structure for testing set membership with false positives
+skiplist: layered linked list for fast search, insert, and delete
+robinhoodhashing: hashing strategy reducing variance in probe sequence lengths
+doublehashing: collision resolution using second hash function
+rollinghash: hash used for string search algorithms like rabin-karp
+kdtree: space-partitioning tree for organizing points in k-dimensional space
+quadtree: tree for partitioning two-dimensional space by recursively subdividing regions
+octree: tree for partitioning three-dimensional space
+bplustree: balanced tree used in databases with efficient range queries
+btreenode: node structure in b-trees storing multiple keys and children
+linkedlistnode: basic unit containing data and pointer(s) for linked lists
+heapnode: node storing value and maintaining heap property
+treenode: node storing data and child references in trees
+trienode: node representing character and child pointers in tries
+graphnode: vertex containing data and neighbor references
+dynamicprogrammingtable: 2d or 3d array storing solutions to subproblems
+memoizationcache: dictionary storing results of expensive function calls
+suffixautomaton: compact automaton recognizing all substrings of a text
+radixtrie: trie storing integers or strings using bits or characters as keys
+zarray: array storing length of longest common prefix starting at each position
+lcparray: array storing lengths of longest common prefixes between sorted suffixes
+bitset: array of bits supporting efficient bitwise operations
+bitmap: 2d array of bits used for image or space representation
+linkedhashmap: hashmap maintaining insertion order of elements
+treemapnode: node in balanced search tree storing key-value pairs
+heapify: process of building a heap from an unsorted array
+percolateup: operation moving a node up to restore heap property
+percolatedown: operation moving a node down to restore heap property
+toptree: tree representing clusters of nodes in dynamic trees
+rangeminimumquery: data structure answering queries for minimum in subarrays
+sparsetable: data structure for immutable range minimum queries in O(1)
+lru: least recently used cache strategy
+lfu: least frequently used cache strategy
+fifo: first-in-first-out cache replacement strategy
+bloomfilterbitarray: bit array representing bloom filter state
+perfecthashing: collision-free hashing for static sets
+quicksortpartition: algorithm step dividing array around a pivot
+mergeprocedure: step merging sorted subarrays in mergesort
+linkedlistmerge: algorithm merging two sorted linked lists
+segmenttreequery: process of retrieving range information from segment tree
+graphdfs: depth-first search traversing graph nodes deeply before backtracking
+graphbfs: breadth-first search visiting neighbors level by level
+dijkstraheap: priority queue used in dijkstra’s shortest path algorithm
+bellmanfordtable: table storing distances and predecessors in bellman-ford
+floydwarshallmatrix: matrix storing shortest paths between all pairs of nodes
+adjacencybitmatrix: space-efficient adjacency matrix using bits for dense graphs
+compressedtrie: trie minimizing space by merging single-child paths
+radixheap: specialized heap optimized for integer keys in narrow ranges
+pairingheap: heap structure supporting fast meld operations
+database: organized collection of structured data stored electronically
+relationaldatabase: database organizing data into tables with rows and columns
+table: structure storing data in rows and columns
+row: individual record in a database table
+column: attribute or field describing data in a table
+primarykey: unique identifier for each record in a table
+foreignkey: field establishing relationship between two tables
+uniqueconstraint: ensures all values in a column are unique
+notnull: constraint requiring a column to have a non-null value
+checkconstraint: enforces rules on values in a column
+index: data structure improving search speed on columns
+compositekey: primary key made up of multiple columns
+schema: logical grouping of database objects like tables or views
+view: virtual table representing query results
+materializedview: view storing precomputed results for faster access
+storedprocedure: precompiled set of sql statements executed on request
+trigger: procedure automatically executed in response to events
+cursor: database object for iterating through query result sets
+sequence: generates sequential numeric values for primary keys
+transaction: sequence of operations performed as a single unit of work
+commit: saves all changes in a transaction to the database
+rollback: undoes all changes made in a transaction
+savepoint: marker within a transaction to roll back to specific points
+acid: properties ensuring atomicity, consistency, isolation, durability
+atomicity: guarantees all operations in transaction complete or none do
+consistency: ensures database moves from one valid state to another
+isolation: ensures concurrent transactions don’t interfere with each other
+durability: ensures committed transactions persist even after failures
+normalization: process of organizing data to reduce redundancy
+denormalization: combining tables to reduce joins and improve read speed
+firstnormalform: table structure with no repeating groups
+secondnormalform: meets 1nf and removes partial dependency on primary key
+thirdnormalform meets 2nf and removes transitive dependencies
+boycecoddnormalform: stricter version of 3nf eliminating remaining redundancy
+entityrelationshipdiagram: visual representation of database tables and relationships
+entity: object or concept modeled in database tables
+attribute: property describing an entity in a table
+relationship: association between entities in a database
+one2one: relationship where one record relates to one record in another table
+one2many: relationship where one record relates to many records in another table
+many2many: relationship where multiple records relate to multiple records
+sql: structured query language for managing relational databases
+select: sql command retrieving data from tables
+insert: sql command adding new records to tables
+update: sql command modifying existing records
+delete: sql command removing records from tables
+where: clause filtering records based on conditions
+groupby: groups rows sharing values in specified columns
+having: filters grouped data based on aggregate conditions
+orderby: sorts query results by specified columns
+join: combines rows from two or more tables based on relationships
+innerjoin: returns matching rows from both tables
+leftjoin: returns all rows from left table and matching rows from right
+rightjoin: returns all rows from right table and matching rows from left
+fulljoin: returns all rows from both tables with nulls where no match
+crossjoin: returns cartesian product of two tables
+selfjoin: joins a table with itself
+subquery: nested query used within another query
+union: combines results of multiple select statements
+intersect: returns rows common to two select statements
+except: returns rows from first select not present in second
+distinct: removes duplicate rows from query results
+aggregatefunction: functions like sum, avg, count operating on sets of rows
+sum: calculates total of numeric column
+avg: calculates average value of numeric column
+count: counts number of rows matching criteria
+min: returns smallest value in column
+max: returns largest value in column
+databaseengine: software handling storage, retrieval, and management of data
+mysqldatabase: popular open-source relational database system
+postgresqldatabase: advanced open-source relational database with strong features
+oracledatabase: enterprise relational database management system
+sqlserver: relational database system from microsoft
+sqlite: lightweight, file-based relational database
+mariadb: community-developed fork of mysql
+nosql: databases storing unstructured or semi-structured data without fixed schemas
+documentdatabase: nosql storing data as documents like json
+keyvaluestore: nosql storing data as key-value pairs
+columndatabase: nosql storing data in column families for fast analytics
+graphdatabase: nosql storing data as nodes and relationships
+mongodb: popular nosql document database
+redis: in-memory key-value store with optional persistence
+cassandra: nosql database optimized for scalability and availability
+neo4j: popular graph database supporting complex relationships
+sharding: partitioning database into smaller pieces across servers
+replication: copying data from one server to another for
+backup: process of creating copies of database data for recovery
+restore: process of recovering data from backup
+databaseadministrator: person managing and maintaining databases
+queryoptimizer: component determining most efficient way to execute
+executionplan: detailed strategy database uses to run a query
+explainplan: tool showing how a database will execute a query
+connectionpooling: reuses database connections to improve performance
+dataintegrity: ensures accuracy and consistency of stored data
+referentialintegrity: ensures relationships between tables remain consistent
+fileoutputstream: writes raw bytes to a file
+objectinputstream: reads java objects from a stream
+objectoutputstream: writes java objects to a stream
+serialversionuid: unique identifier for serializable classes
+stringtokenizer: splits strings into tokens based on delimiters
+regexpattern: compiled representation of a regular expression
+regexmatcher: engine performing regex match operations
+charset: defines character encoding schemes
+locale: represents geographical, cultural, and political region settings
+random: utility for generating pseudorandom numbers
+secureRandom: stronger random number generator for security
+math: utility class for mathematical functions
+bigdecimal: arbitrary-precision decimal arithmetic class
+biginteger: arbitrary-precision integer arithmetic class
+date: class representing date and time
+calendar: class for date-time manipulation with fields like year or month
+instant: represents a timestamp in java time api
+localdate: represents a date without time-zone
+localtime: represents time without date
+localdatetime: represents date and time without time-zone
+zonedatetime: represents date and time with a time-zone
+duration: represents time-based amount like seconds or minutes
+period: represents date-based amount like days or months
+zoneid: represents time-zone identifier
+formatter: formats date, time, or numbers into strings
+parsable: objects that can be converted from or to string representations
+stringbuildercapacity: initial buffer size for stringbuilder
+charsequence: readable sequence of characters interface
+bytebuffer: buffer of bytes for nio operations
+charbuffer: buffer of characters for nio operations
+readablebytechannel: channel for reading bytes
+writablebytechannel: channel for writing bytes
+selector: multiplexes multiple channels in non-blocking io
+socket: endpoint for network communication
+serversocket: listens for incoming tcp connections
+datagramsocket: endpoint for udp packet communication
+url: represents uniform resource locator for network resources
+uri: represents uniform resource identifier
+inetaddress: represents internet protocol address
+datainputstream: reads primitive data types from stream
+dataoutputstream: writes primitive data types to stream
+enumset: specialized set implementation for enums
+enummap: specialized map implementation for enums as keys
+weakreference: reference not preventing garbage collection
+softreference: reference collected only under memory pressure
+phantomreference: reference notified before garbage collection
+concurrenthashmap: thread-safe hash table for concurrent access
+copyonwritearraylist: thread-safe list optimized for read-heavy scenarios
+threadlocal: maintains variables local to the current thread
+reentrantlock: mutual exclusion lock with advanced features
+countdownlatch: synchronizes threads by waiting for a countdown
+cyclicbarrier: synchronizes threads waiting for each other to reach a point
+semaphore: controls number of threads accessing a resource
+exchanger: allows two threads to exchange objects
+blockingqueue: queue supporting thread-safe blocking operations
+linkedblockingqueue: linked list based blocking queue
+arrayblockingqueue: fixed-size array-based blocking queue
+priorityblockingqueue: blocking queue with priority ordering
+delayqueue: queue of elements that become available after delay
+synchronousqueue: queue with no internal capacity
+forkjoinpool: thread pool optimized for parallel tasks
+spliterator: traverses and partitions elements for parallel processing
+function: represents a function with one argument returning a result
+predicate: represents a boolean-valued function
+supplier: provides results with no input arguments
+consumer: accepts single input argument with no return
+biconsumer: accepts two input arguments with no return
+bipredicate: represents boolean function with two arguments
+bifunction: represents function with two arguments returning result
+unaryoperator: function operating on and returning same type
+binaryoperator: function taking two inputs of same type returning same type
+getline: reads entire line from input stream into string
+stringstream: reads and writes data into string buffers
+istringstream: reads from a string as input stream
+ostringstream: writes to a string as output stream
+iomanip: header providing formatting utilities like setw or setprecision
+setw: manipulator setting field width for output
+setprecision: manipulator setting decimal precision
+fixed: manipulator forcing fixed-point notation
+scientific: manipulator forcing scientific notation
+showpos: manipulator showing positive number sign
+noshowpos: manipulator hiding positive sign
+showpoint: manipulator forcing display of decimal point
+boolalpha: manipulator displaying bools as true or false
+noboolalpha: manipulator displaying bools as 1 or 0
+flush: forces output stream buffer to flush immediately
+endl: inserts newline and flushes output stream
+cerrno: variable representing error codes from system calls
+strerror: returns error message string from error code
+errno: integer storing error codes for library functions
+cstddef: header defining sizet and ptrdifft
+cstring: header for string manipulation functions
+cstdlib: header for general utilities like malloc and rand
+cmath: header for mathematical functions like sqrt or sin
+climits: header defining numeric limits like intmax
+cfloat: header defining floating-point limits
+ctime: header for time manipulation functions
+cctype: header for character classification functions
+cassert: header for adding runtime assertions
+span: view over contiguous sequence of objects
+sharedptr: smart pointer with shared ownership
+uniqueptr: smart pointer with exclusive ownership
+weakptr: non-owning reference to sharedptr
+enablesharedfromthis: allows object to create sharedptr to itself
+moveconstructor: transfers resources from one object to another
+movassignment: transfers resources during assignment
+swapfunction: exchanges values of two objects
+stdfunction: general-purpose polymorphic function wrapper
+datastructure: organized way to store and manage data efficiently
+array: contiguous memory storing elements of the same type
+dynamicarray: resizable array like vectors or arraylists
+linkedlist: linear collection of nodes pointing to the next
+singlylinkedlist: linked list with nodes pointing to next node only
+doublylinkedlist: linked list with nodes pointing to both next and previous nodes
+circularlinkedlist: linked list where last node points back to the first
+stack: linear structure following last-in-first-out principle
+queue: linear structure following first-in-first-out principle
+deque: double-ended queue allowing insertion and removal from both ends
+priorityqueue: queue where elements are served based on priority
+binarytree: hierarchical structure with nodes having up to two children
+binarysearchtree: binary tree maintaining order property for fast lookup
+avltree: self-balancing binary search tree maintaining height balance
+redblacktree: balanced binary search tree with red-black color properties
+splaytree: self-adjusting binary search tree moving accessed elements to root
+segmenttree: tree for range queries and updates on arrays
+fenwicktree: binary indexed tree for prefix sum queries
+heap: complete binary tree maintaining heap order property
+minheap: heap where parent is always smaller than children
+maxheap: heap where parent is always larger than children
+treemap: map implemented using balanced binary search tree
+tries: prefix tree for efficient string and dictionary operations
+suffixtrie: trie storing all suffixes of a string for pattern searching
+suffixarray: array of starting indices of all sorted suffixes of a string
+hashmap: key-value data structure with fast average lookup
+hashset: collection of unique elements using hash table
+hashfunction: function mapping keys to hash table indices
+openaddressing: collision resolution strategy placing elements in next available slot
+chaining: collision resolution strategy using linked lists at each hash bucket
+graph: collection of nodes connected by edges
+adjacencylist: graph representation using lists for each vertex's neighbors
+adjacencymatrix: 2d matrix representing edges between vertices
+weightedgraph: graph with edges having associated weights
+directedgraph: graph with edges having a direction
+undirectedgraph: graph with bidirectional edges
+acyclicgraph: graph with no cycles
+cyclicgraph: graph containing at least one cycle
+dags: directed acyclic graphs used in scheduling problems
+spanningtree: tree connecting all nodes of a graph with minimal edges
+mst: minimum spanning tree with lowest total edge weight
+disjointset: data structure tracking set partitions for union-find operations
+unionfind: algorithm for disjoint set operations with union by rank and path compression
+ctype: functions like isalpha or isdigit for character checks
+dynamiccast: safely casts pointers or references in polymorphic hierarchies
+reinterpretcast: casts pointers to unrelated types
+constcast: adds or removes const qualifier
+staticcast: performs compile-time checked conversions
+bitwiseand: & operator for binary AND
+bitwiseor: | operator for binary OR
+bitwisexor: ^ operator for binary XOR
+bitwisenot: ~ operator for binary NOT
+bitwiseshiftleft: << operator for left shifting bits
+bitwiseshiftright: >> operator for right shifting bits
+bitfieldmasking: technique using bitwise operations to store flags
+unionsize: memory size shared among union members
+volatilepointer: pointer to variable that may change asynchronously
+defaultarguments: specify default values for function parameters
+variadicfunction: function accepting variable number of arguments
+ellipsis: ... syntax used in variadic functions
+valist: type to access arguments of variadic functions
+vastart: macro to initialize valist
+vaarg: macro to retrieve next argument
+vaend: macro to clean up valist
+externc: linkage specifier to use c linkage in c++ code
+explicitconversionoperator: user-defined conversion functions requiring explicit cast
+overloadednew: custom implementation of new operator
+overloaddelete: custom implementation of delete operator
+placementnew: constructs object at specific memory location
+scopeoperator: operator to access global or namespace members
+sizeofoperator: returns size of type or object
+typeidoperator: returns type information at runtime
+noexcept: specifies function does not throw exceptions
+throwlist: declares exceptions a function might throw
+alignas: specifies alignment requirement for types
+alignof: returns alignment requirement of a type
+staticassert: checks compile-time conditions
+constexprif: enables compile-time conditional branching
+foldexpressions: simplifies variadic template parameter pack expansion
+templatealias: creates alias for template type
+variadictemplates: template accepting variable number of parameters
+templateparameterpack: pack of template parameters
+parameterpackexpansion: syntax to unpack parameter packs
+decltypeauto: deduces return type including references
+structuredbinding: binds names to elements of tuple or pair
+initcapture: captures variables by value in lambda initialization
+decltype: inspects declared type of an expression
+tuple: fixed-size collection of heterogeneous values
+maketuple: creates tuple from given values
+arraytemplate: fixed-size sequence of elements in stl
+forwardlist: singly linked list implementation in stl
+stringview: lightweight non-owning view of string data
